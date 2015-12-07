@@ -8,13 +8,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
+var Hero = (function () {
+    function Hero() {
+    }
+    return Hero;
+})();
 var AppComponent = (function () {
     function AppComponent() {
+        this.title = 'Tour of Heroes';
+        this.hero = {
+            id: 1,
+            name: 'Windstorm'
+        };
     }
     AppComponent = __decorate([
         angular2_1.Component({
             selector: 'my-app',
-            template: '<h1>Tour of Heroes</h1>'
+            template: "\n\t\t\t  <h1>{{title}}</h1>\n\t\t\t  <h2>{{hero.name}} details!</h2>\n\t\t\t  <div><label>id: </label>{{hero.id}}</div>\n\t\t\t  <div>\n\t\t\t\t  <label>name: </label>\n\t\t\t\t  <div><input [(ng-model)]=\"hero.name\" placeholder=\"name\"></div>\n\t\t\t  </div>\n\t\t\t  ",
+            directives: [angular2_1.FORM_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
